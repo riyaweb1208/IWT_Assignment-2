@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+  /* Stylesheet */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    background-color: #333;
+    overflow: hidden;
+  }
+  nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .welcome {
+    background-color: #f2f2f2;
+    padding: 50px;
+    text-align: center;
+  }
+  section {
+    padding: 50px;
+  }
+  .about, .portfolio, .contact {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" onclick="showSection('home')">Home</a>
+  <a href="#" onclick="showSection('about')">About</a>
+  <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+  <a href="#" onclick="showSection('contact')">Contact</a>
+</nav>
+
+<section class="welcome" id="home">
+  <h1>Welcome to My Portfolio</h1>
+  <p>Hi, I'm [Your Name]. I am a passionate [Your Profession] with expertise in [Your Skills].</p>
+</section>
+
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>I am a [Your Educational Background]. My technical skills include [Your Technical Skills]. I am interested in [Your Interests] and have achieved [Your Achievements].</p>
+  <p>Here are the links to my IT 302 Lab exercises and assignments:</p>
+  <ul>
+    <li><a href="#">Exercise 1</a></li>
+    <li><a href="#">Exercise 2</a></li>
+    <!-- Add more links as needed -->
+  </ul>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <h2>Portfolio</h2>
+  <div>
+    <h3>Project 1</h3>
+    <p>Description of Project 1.</p>
+    <a href="#">Project 1 Link</a>
+  </div>
+  <div>
+    <h3>Project 2</h3>
+    <p>Description of Project 2.</p>
+    <a href="#">Project 2 Link</a>
+  </div>
+  <!-- Add more projects as needed -->
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <form id="contactForm" onsubmit="return validateForm()">
+    <input type="text" placeholder="Name" required><br>
+    <input type="email" placeholder="Email" required><br>
+    <textarea placeholder="Message" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<script>
+  // JavaScript
+  function showSection(sectionId) {
+    document.querySelectorAll('section').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+    smoothScroll(sectionId);
+  }
+
+  function smoothScroll(target) {
+    const element = document.getElementById(target);
+    window.scrollTo({
+      top: element.offsetTop,
+      behavior: 'smooth'
+    });
+  }
+
+  function validateForm() {
+    // Basic validation, you can enhance this as needed
+    const name = document.querySelector('#contactForm input[type="text"]').value;
+    const email = document.querySelector('#contactForm input[type="email"]').value;
+    const message = document.querySelector('#contactForm textarea').value;
+    
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+      alert('Please fill in all fields.');
+      return false;
+    }
+    // Additional validation logic can be added here
+    return true;
+  }
+</script>
+
+</body>
+</html>

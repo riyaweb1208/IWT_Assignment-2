@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Cards</title>
+    <style>
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            vertical-align: top;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .card .date {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="eventContainer"></div>
+
+    <script>
+        var events = [
+            {
+                title: "Event 1",
+                image: "1.jpeg",
+                date: "January 1, 2024",
+                description: "Description"
+            },
+            {
+                title: "Event 2",
+                image: "2.jpeg",
+                date: "February 15, 2024",
+                description: "Description"
+            },
+            {
+                title: "Event 3",
+                image: "3.jpeg",
+                date: "March 20, 2024",
+                description: "Description"
+            }
+        ];
+
+        function generateEventCards() {
+            var eventContainer = document.getElementById("eventContainer");
+            eventContainer.innerHTML = ""; 
+
+            events.forEach(function(event) {
+                var card = document.createElement("div");
+                card.classList.add("card");
+
+                var image = document.createElement("img");
+                image.src = event.image;
+                card.appendChild(image);
+
+                var title = document.createElement("h2");
+                title.textContent = event.title;
+                card.appendChild(title);
+
+                var date = document.createElement("p");
+                date.classList.add("date");
+                date.textContent = event.date;
+                card.appendChild(date);
+
+                var description = document.createElement("p");
+                description.textContent = event.description;
+                card.appendChild(description);
+
+                eventContainer.appendChild(card);
+            });
+        }
+
+        
+        window.onload = generateEventCards;
+    </script>
+</body>
+</html>

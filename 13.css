@@ -1,0 +1,44 @@
+body {
+    position: relative;
+    color: #ffffff; /* Choose a color that contrasts well with your background */
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(120, 120, 194, 0.5), rgba(106, 106, 174, 0.8)), url('F:\Shreyasi Srivastava\IWT_LAB\images\9.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(54, 54, 114, 0.5), rgba(0,0,255,0.8));
+    z-index: -1;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #d1eaff; /* Lighter shade for better visibility */
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #a9c9ff; /* Adjusted to fit the blue background */
+}
+
+strong {
+    background-color: rgb(124, 124, 52);
+    color: black;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 255, 0), rgba(0, 0, 255, 0.75), rgba(0, 0, 255, 0));
+}

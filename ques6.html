@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Chapter</title>
+</head>
+<body bgcolor="lavender">
+
+<h1>Chapter 1: Introduction</h1>
+
+<ol>
+    <li><a href="#topic1">Topic 1: Overview</a></li>
+    <li><a href="#topic2">Topic 2: Editing HTML5</a></li>
+    <li><a href="#topic3">Topic 3: First HTML5 Example</a></li>
+    <li><a href="#topic4">Topic 4: W3C HTML Validation  Service</a></li>
+    <li><a href="#topic5">Topic 5: Headings</a></li>
+</ol>
+
+<h2 id="topic1">Topic 1: Overview</h2>
+<p>
+    This chapter begins unlocking the power of web-based application development with
+HTML5. Unlike programming languages, such as C, C++, C#, Java and Visual Basic,
+HTML5 is a markup language that specifies the structure and content of documents that
+are displayed in web browsers.
+We introduce some basics, then cover more sophisticated HTML5 techniques such as:
+• tables, which are particularly useful for structuring information from databases
+(i.e., software that stores structured sets of data)
+• forms for collecting information from web-page visitors
+• internal linking for easier page navigation
+• meta elements for specifying information about a document
+In Chapter 3, we introduce many new features in HTML5. In Chapter 4, we discuss
+CSS3, a technology for specifying how web pages look</p>
+
+<h2 id="topic2">Topic 2: Editing HTML5</h2>
+<p>We'll create HTML5 documents by typing HTML5 markup text in a text editor (such as
+    Notepad, TextEdit, vi, emacs) and saving it with the .html or .htm filename extension.
+    Computers called web servers store HTML5 documents. Clients (such as web browsers
+    running on your local computer or smartphone) request specific resources such as
+    HTML5 documents from web servers. For example, typing www.deitel.com/books/
+    downloads.html into a web browser's address field requests the file downloads.html from
+    the books directory on the web server running at www.deitel.com. We discuss web servers
+    in Chapter 17. For now, you'll simply place the HTML5 documents on your computer
+    and render (i.e., display) them by opening them locally with a web browser</p>
+
+<h2 id="topic3">Topic 3: First HTML5 Example</h2>
+<p>This chapter presents HTML5 markup capabilities and provides screen captures that show
+    how a browser renders (that is, displays) the HTML5. You can download the examples
+    2.1 Introduction
+    2.2 Editing HTML5
+    2.3 First HTML5 Example
+    2.4 W3C HTML5 Validation Service
+    2.5 Headings
+    2.6 Linking
+    2.7 Images
+    2.7.1 alt Attribute
+    2.7.2 Void Elements
+    2.7.3 Using Images as Hyperlinks
+    2.8 Special Characters and Horizontal
+    Rules
+    2.9 Lists
+    2.10 Tables
+    2.11 Forms
+    2.12 Internal Linking
+    2.13 meta Elements
+    2.14 Web Resources
+    Summary | Self-Review Exercises | Answers to Self-Review Exercises | Exercises
+    2.3 First HTML5 Example 39
+    from www.pearsonhighered.com/deitel. The HTML5 documents we show have line
+    numbers for your convenience—these are not part of the documents. Open each HTML5
+    document in various web browsers so you can view and interact with it.
+    Figure 2.1 is an HTML5 document named main.html, which is stored in the examples/ch02 folder. This first example displays the message Welcome to HTML5! in the
+    browser. Now let's consider each line of the document.
+    Document Type Declaration
+The document type declaration (DOCTYPE) in line 1 is required in HTML5 documents so
+that browsers render the page in standards mode, according to the HTML and CSS specifications. Some browsers operate in quirks mode to maintain backward compatibility
+with web pages that are not up-to-date with the latest standards. You’ll include the DOCTYPE in each HTML5 document you create.
+Blank Lines
+We include blank lines (lines 2 and 10) to make our documents easier to read—the browser ignores them.
+Comments
+Lines 3–4 are HTML5 comments. You’ll insert comments in your HTML5 markup to
+improve readability and describe the content of a document. The browser ignores comments when your document is rendered. HTML5 comments start with <!-- and end with
+-->. We include in our examples comments that specify the figure number and file name
+and state the example’s purpose. We’ll often include additional comments, especially to
+explain new features.
+1 <!DOCTYPE html>
+2
+3 <!-- Fig. 2.1: main.html -->
+4 <!-- First HTML5 example. -->
+5 <html>
+6 <head>
+7 <meta charset = "utf-8">
+8 <title>Welcome</title>
+9 </head>
+10
+11 <body>
+12 <p>Welcome to HTML5!</p>
+13 </body>
+14 </html>
+Fig. 2.1 | First HTML5 example.
+Tab shows
+contents of
+title element
+40 Chapter 2 Introduction to HTML5: Part 1
+html, head and body Elements
+HTML5 markup contains text (and images, graphics, animations, audios and videos) that
+represents the content of a document and elements that specify a document’s structure and
+meaning. Some important elements are the html element (which starts in line 5 and ends
+in line 14), the head element (lines 6–9) and the body element (lines 11–13). The html
+element encloses the head section (represented by the head element) and the body section
+(represented by the body element). The head section contains information about the
+HTML5 document, such as the character set (UTF-8, the most popular character-encoding
+scheme for the web) that the page uses (line 7)—which helps the browser determine how
+to render the content—and the title (line 8). The head section also can contain special
+document-formatting instructions called CSS3 style sheets and client-side programs
+called scripts for creating dynamic web pages. (We introduce CSS3 style sheets in Chapter 4
+and explain scripting with the JavaScript language in Chapters 6–13.) The body section
+contains the page’s content, which the browser displays when the user visits the web page.
+Start Tags and End Tags
+HTML5 documents delimit most elements with a start tag and an end tag. A start tag consists of the element name in angle brackets (for example, <html> in line 5). An end tag consists of the element name preceded by a forward slash (/) in angle brackets (for example,
+</html> in line 14). There are several so-called “void elements” that do not have end tags.
+As you’ll soon see, many start tags have attributes that provide additional information
+about an element, which browsers use to determine how to process the element. Each attribute has a name and a value separated by an equals sign (=).</p>
+
+<h2 id="topic4">Topic 4: W3C HTML Validation Service</h2>
+<p>You must use proper HTML5 syntax to ensure that browsers process your documents
+    properly. The World Wide Web Consortium (W3C) provides a validation service (at
+    validator.w3.org) for checking a document’s syntax. Documents can be validated by
+    • providing the URL of an online web page
+    • uploading a file to the validator
+    • pasting code directly into a text area provided on the validator site
+    All of the HTML5 examples in this book have been validated by uploading a file to:
+    To use validator.w3.org/#validate-by-upload, click the Choose File button to
+    select a file from your computer to validate. Next, click More Options. In the Document
+    Type drop-down list, select HTML5 (experimental). Select the Verbose Output checkbox,
+    then click the Check button to validate your document. If it contains syntax errors, the
+    validation service displays error messages describing the errors. Since the HTML5 validator is still considered experimental, you’ll receive a warning each time you validate an
+    HTML5 document.</p>
+
+    <h2 id="topic5">Topic 5: Headings</h2>
+    <p>Some text in an HTML5 document may be more important than other text. HTML5 provides six heading elements (h1 through h6) for specifying the relative importance of information (Fig. 2.2). Heading element h1 (line 12) is considered the most significant one and is
+        typically rendered in a larger font than the other five (lines 13–17). Each successive heading
+        element (h2, h3, etc.) is typically rendered in a progressively smaller font.</p>
+
+</body>
+</html>

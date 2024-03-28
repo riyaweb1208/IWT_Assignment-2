@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Grid</title>
+    <style>
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createGrid(rows, columns) {
+            var container = document.createElement('div');
+            for (var i = 0; i < rows; i++) {
+                for (var j = 0; j < columns; j++) {
+                    var cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    if ((i + j) % 2 === 0) {
+                        cell.style.backgroundColor = 'black';
+                    } else {
+                        cell.style.backgroundColor = 'red';
+                    }
+                    container.appendChild(cell);
+                }
+                container.appendChild(document.createElement('br'));
+            }
+            document.body.appendChild(container);
+        }
+
+        var rows = parseInt(prompt('Enter the number of rows:'));
+        var columns = parseInt(prompt('Enter the number of columns:'));
+        createGrid(rows, columns);
+    </script>
+</body>
+</html>

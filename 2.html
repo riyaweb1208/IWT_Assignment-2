@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<style>
+  /* Stylesheet */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f3ff; /* Lavender background */
+    color: #6a0dad; /* Dark purple text color */
+  }
+  nav {
+    background-color: #b19cd9; /* Lavender navbar */
+    overflow: hidden;
+  }
+  nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  nav a:hover {
+    background-color: #9378af; /* Darker lavender on hover */
+  }
+  .welcome {
+    background-color: #e8e3ff; /* Light lavender welcome section */
+    padding: 50px;
+    text-align: center;
+  }
+  section {
+    padding: 50px;
+  }
+  .about, .portfolio, .contact {
+    display: none;
+  }
+  h1, h2, h3 {
+    color: #6a0dad; /* Dark purple headings */
+  }
+  a {
+    color: #6a0dad; /* Dark purple links */
+  }
+  a:hover {
+    color: #4b0784; /* Darker purple on hover */
+  }
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #b19cd9; /* Lavender border */
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #b19cd9; /* Lavender submit button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #9378af; /* Darker lavender on hover */
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" onclick="showSection('home')">Home</a>
+  <a href="#" onclick="showSection('about')">About</a>
+  <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+  <a href="#" onclick="showSection('contact')">Contact</a>
+</nav>
+
+<section class="welcome" id="home">
+  <h1>Welcome Everybody!!</h1>
+  <p>I'm Shreyasi Srivastava, a third-year B.Tech student in Information Technology.</p>
+  <p>This webpage is my assignment where I had to make 4 pages. Each page contains something new.</p>
+  <p>Feel free to check out the pages. Use the navigation bar to do so.</p>
+</section>
+
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p><img src="Assignment2/home.jpg" alt="Owner Picture"></p>
+  <p>I am a third-year B.Tech student in Information Technology. I'm passionate about technology and languages. I am very much aware of C, C++, JAVA, Full Stack Development, Generative AI, NodeJs, Unix, Linux, Ruby, etc..</p>
+  <p>I'm currently pursuing an advanced diploma in German language, and I've already completed Certifications and Diplomas in German. My proficiency level in German is B1. I have 2 years of experience in speaking german.</p>
+  <p>Aside from academics, I have a keen interest in sports. I was a state-level player of table tennis and have represented myself in national events as well.</p>
+  <p>In the technical realm, I'm actively involved in hackathons and enjoy exploring new technologies to solve real-world problems.</p>
+</section>
+
+<section class="portfolio" id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Here are the links to my IT 302 Lab exercises and assignments:</p>
+    <ul>
+      <li><a href="#">Exercise 1</a></li>
+      <li><a href="#">Exercise 2</a></li>
+      <li><a href="#">Exercise 3</a></li>
+      <li><a href="#">Exercise 4</a></li>
+      <li><a href="#">Exercise 5</a></li>
+      <li><a href="#">Exercise 6</a></li>
+      <li><a href="#">Exercise 7</a></li>
+      <li><a href="#">Exercise 8</a></li>
+      <li><a href="#">Exercise 9</a></li>
+      <li><a href="#">Exercise 10</a></li>
+      <li><a href="#">Exercise 11</a></li>
+      <li><a href="#">Exercise 12</a></li>
+      <li><a href="#">Exercise 13</a></li>
+      <li><a href="#">Exercise 14</a></li>
+      <li><a href="#">Exercise 15</a></li>
+      <li><a href="#">Exercise 16</a></li>
+      <li><a href="#">Exercise 17</a></li>
+      <li><a href="#">Exercise 18</a></li>
+      <li><a href="#">Exercise 19</a></li>
+      <li><a href="#">Exercise 20</a></li>
+      <li><a href="#">Exercise 21</a></li>
+      <li><a href="#">Exercise 22</a></li>
+      <li><a href="#">Exercise 23</a></li>
+      <li><a href="#">Exercise 24</a></li>
+      <li><a href="#">Exercise 25</a></li>
+      <li><a href="#">Exercise 26</a></li>
+      <li><a href="#">Exercise 27</a></li>
+      <li><a href="#">Exercise 28</a></li>
+      <!-- Add more links as needed -->
+    </ul>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" onsubmit="return validateForm()">
+      <input type="text" placeholder="Name" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <textarea placeholder="Message" required></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+</section>
+
+<script>
+  // JavaScript
+  function showSection(sectionId) {
+    document.querySelectorAll('section').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+    smoothScroll(sectionId);
+  }
+
+  function smoothScroll(target) {
+    const element = document.getElementById(target);
+    window.scrollTo({
+      top: element.offsetTop,
+      behavior: 'smooth'
+    });
+  }
+
+  function validateForm() {
+    // Basic validation, you can enhance this as needed
+    const name = document.querySelector('#contactForm input[type="text"]').value;
+    const email = document.querySelector('#contactForm input[type="email"]').value;
+    const message = document.querySelector('#contactForm textarea').value;
+    
+    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+      alert('Please fill in all fields.');
+      return false;
+    }
+    // Additional validation logic can be added here
+    return true;
+  }
+</script>
+
+</body>
+</html>

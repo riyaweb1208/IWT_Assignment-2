@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Ques 11
+        </title>
+    </head>
+    <body bgcolor="lavender">
+        <h1 align="center">SOFTWARE FEEDBACK FORM</h1>
+        <form action="submit.html" method="post">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name" minlength="4" maxlength="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email::</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" minlength="4" maxlength="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Age Group:
+                    </td>
+                    <td>
+                        <input type="radio" id="age1" name="age" value="18-30">
+                        <label for="age1">18-30</label><br>
+                        <input type="radio" id="age2" name="age" value="31-50">
+                        <label for="age2">31-50</label><br>
+                        <input type="radio" id="age3" name="age" value="51+">
+                        <label for="age3">51+</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Features Used:</td>
+                    <td>
+                        <input type="checkbox" id="feature1" name="feature1" value="Feature A">
+                        <label for="feature1">Feature A</label><br>
+                        <input type="checkbox" id="feature2" name="feature2" value="Feature B">
+                        <label for="feature2">Feature B</label><br>
+                        <input type="checkbox" id="feature3" name="feature3" value="Feature C">
+                        <label for="feature1">Feature C</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="satisfaction">Overall Satisfaction:</label>
+                    </td>
+                    <td>
+                        <select id="satisafction" name="satisafction">
+                            <option value="vs">Very Satisfied</option>
+                            <option value="s">Satisfied</option>
+                            <option value="avg">Average</option>
+                            <option value="p">Poor</option>
+                            <option value="vp">Very Poor</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comments">Additional Comments: </label>
+                    </td>
+                    <td>
+                        <textarea id="comments" name="comments" row="4" cols="50" minlength="4" maxlength="200">
+                
+                        </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

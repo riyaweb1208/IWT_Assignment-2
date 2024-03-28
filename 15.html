@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Template</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .header {
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box; /* Include padding and border in the element's width */
+        }
+        .column p {
+            background-color: #e7e7e7;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Layout Header</h1>
+</div>
+
+<div class="row">
+    <div class="column">
+        <p>This is the first paragraph. It should be on the left side.</p>
+    </div>
+    <div class="column">
+        <p>This is the second paragraph. It should be on the right side.</p>
+    </div>
+</div>
+
+</body>
+</html>

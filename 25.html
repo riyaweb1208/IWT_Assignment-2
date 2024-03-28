@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <label for="temperatureInput">Enter temperature:</label>
+    <input type="number" id="temperatureInput">
+    <select id="fromUnit">
+        <option value="kelvin">Kelvin</option>
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+    </select>
+
+    <label for="convertedTemperature">Converted temperature:</label>
+    <input type="text" id="convertedTemperature" readonly>
+
+    <button onclick="convertTemperature()">Convert</button>
+
+    <script>
+        function convertTemperature() {
+            var inputTemperature = parseFloat(document.getElementById("temperatureInput").value);
+            var fromUnit = document.getElementById("fromUnit").value;
+            var convertedTemperature;
+
+            if (isNaN(inputTemperature)) {
+                alert("Please enter a valid temperature value.");
+                return;
+            }
+
+            if (fromUnit === "kelvin") {
+                convertedTemperature = inputTemperature - 273.15; // Kelvin to Celsius
+            } else if (fromUnit === "celsius") {
+                convertedTemperature = inputTemperature * 1.8 + 32; // Celsius to Fahrenheit
+            } else if (fromUnit === "fahrenheit") {
+                convertedTemperature = (inputTemperature - 32) / 1.8; // Fahrenheit to Celsius
+            }
+
+            document.getElementById("convertedTemperature").value = convertedTemperature.toFixed(2);
+        }
+    </script>
+</body>
+</html>

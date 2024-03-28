@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navigation Bar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Style the navigation bar */
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        /* Style the navigation links */
+        .navbar li {
+            float: left;
+        }
+        .navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        /* Change the link color to #111 (black) on hover */
+        .navbar li a:hover {
+            background-color: #111;
+        }
+        /* Clear floats after the columns */
+        .content:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Style the content */
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="navbar">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+
+<div class="content">
+    <h2>Welcome to Our Site!</h2>
+    <p>This is a simple demonstration of a horizontal navigation bar using an unordered list and internal CSS. Below this navigation bar, you can place any content you like. This example includes a welcome message and a brief introduction paragraph.</p>
+</div>
+
+</body>
+</html>
